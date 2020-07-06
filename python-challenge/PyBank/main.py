@@ -40,8 +40,14 @@ for i in range(0, len(profit_total)):
 
 print (f'Total Earnings: ${profit_sum}')
 
-
 # Average of the changes in "profit/loss" over the entire period
+for i in range(0, len(profit_total)-1):
+    profit_change[i] = float(profit_total[i]) - float(profit_total[i+1])
+    # profit_change[i].append(profit[i]) -(profit[i+1])
+average_changes = [float(profit_total[i+1]) - float(profit_total[i]) for i in range (len(profit_total)-1)]
+
+print(f'Average Change: ${profit}')
+
 # Greatest increase in profits (date and amount) over the entire period
 # greatest decrease in losses (date and amount) over the entire period
 
