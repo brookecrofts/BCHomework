@@ -8,6 +8,7 @@ profit_total = []
 profit_sum = 0
 profit_change = []
 average_changes = 0
+average_sum = []
                                                 
 #Reading csv file:
 
@@ -33,8 +34,6 @@ print ("--------------------")
 
 print(f' Total Months: {totalmonth}')
 
-# WORKS TILL THIS POINT, DO NOT CHANGE
-
 for i in range(0, len(profit_total)):
     profit_sum=profit_sum + int(profit_total[i])
 
@@ -43,11 +42,11 @@ print (f'Total Earnings: ${profit_sum}')
 # Average of the changes in "profit/loss" over the entire period
 for i in range(0, len(profit_total)-1):
     profit_change[i] = float(profit_total[i]) - float(profit_total[i+1])
-    # profit_change[i].append(profit[i]) -(profit[i+1])
+    
 average_changes = [float(profit_total[i+1]) - float(profit_total[i]) for i in range (len(profit_total)-1)]
+average_sum = sum(average_changes) / totalmonth
+print(f'Average Change: ${average_sum}')
 
-print(f'Average Change: ${profit}')
+# Greatest increase/decrease in profits (date and amount) over the entire period
 
-# Greatest increase in profits (date and amount) over the entire period
-# greatest decrease in losses (date and amount) over the entire period
 
