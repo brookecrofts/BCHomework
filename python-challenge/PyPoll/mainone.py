@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import os
 import csv
 
@@ -39,3 +40,6 @@ print(f'Total Votes: {allvotes}')
 #Total number of votes cast
 #List of candidates that received votes with percentage and number of votes
 #Winner of election based on votes
+=======
+
+>>>>>>> 53c9dfcfbc8edadfa41babce50d36d1f97374a9b
