@@ -51,13 +51,17 @@ print(f'Average Change: ${average_sum}')
 index=0
 max_value = max(average_changes)
 min_value = min(average_changes)
-# date = index(max_value)
+# max_location = average_changes.index(max_value)
+# max_date = date[max_location]
+# list.index(date)
+# date = (row[0], max_value)
 # for index in max_value:
-#     print(index,max)
-
-# if profit_change[i] == max_value:
+#     print(index,date)
 print(f'Greatest Increase in Profits: {date} ${max_value}')
 print(f'Greatest Decrease in Profits: {date} ${min_value}')
 
-# for max in average_changes:
-#     print(index,max)
+# with open('csv_path', 'w') as new_csvfile:
+#     csvwriter = csv.writer(new_csvfile, delimiter ',')
+
+#     csvwriter.writerow('Company Profit Loss')
+#     csvwriter.writerow(['Total months:', 'month_total'])
