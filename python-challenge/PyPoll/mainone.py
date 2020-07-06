@@ -5,10 +5,11 @@ import csv
 csvpath=os.path.join("C:\\Users\\brook\\OneDrive\\Documents\\BootCamp\\Python\\BCHomework\\python-challenge\\PyPoll\\Resources\\election_data.csv")
 
 #containers needed
-candidate_list = []
+candidate_list = ["Khan","Correy","Li","O'Tooley"]
 total_votes = 0
 candidate_votes = []
 percent_of_votes = 0
+individual_votes = 0
 # i=0
 
 with open(csvpath) as csvfile:
@@ -20,7 +21,7 @@ with open(csvpath) as csvfile:
         candidate=row[2]
         candidate_votes.append(candidate)
         candidate_list.append(candidate)
-
+        
         # if candidate not in candidate_list:
         #     candidate_list.append(candidate)
             # candidate_votes[candidate]=0
@@ -35,8 +36,13 @@ print("-------------------------")
 
 #List of candidates that received votes with percentage and number of votes
 
+print(f'Khan: [candidate_list]')
+print(f'Correy: [candidate_list]')
+print(f'Li: [candidate_list')
+print(f'OTooley: [candidate_list]')
+print("--------------------------")
 print(f'Winner: {candidate}')
-print(f'Candidates: []')
+
 
     # print(f'CSV Header; {csv_header}')
     # for row in csvreader:
