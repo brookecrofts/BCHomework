@@ -1,26 +1,46 @@
-#import the os module
+#import the os and csv modules
 import os
-
-#import the csv module
 import csv
+
+#Containers needed
+month_count=[]
+profit_total = []
+profit_sum = 0
+profit_change = []
+average_changes = 0
+                                                
+#Reading csv file:
+
 csvpath = os.path.join("C:\\Users\\brook\\OneDrive\\Documents\\BootCamp\\Python\\BCHomework\\python-challenge\\PyBank\\Resources\\PyBank_Resources_budget_data.csv")
 
-#Reading csv file:
 with open(csvpath) as csvfile:
-    #CSV reader specifies delimiter and variable that holds contents
     csvreader = csv.reader(csvfile, delimiter=',')
+    next(csvreader)
 
-    print(csvreader)
-    # Read header row first
-    csv_header = next(csvreader)
-    print(f'CSV Header: {csv_header}')
+    # Total number of months included in dataset
 
-    # Read each row of data after the header
     for row in csvreader:
-        print(row)
+        date =row[0]
+        profit=row[1]
+        month_count.append(date)
+        profit_total.append(profit)
+        profit_change.append(profit)
 
-# Total number of months included in dataset
-# Net total amount of "profit/loss" over entire period
+totalmonth = len(month_count)
+
+print ("Company Profit Loss")
+print ("--------------------")
+
+print(f' Total Months: {totalmonth}')
+
+# WORKS TILL THIS POINT, DO NOT CHANGE
+
+for i in range(0, len(profit_total)):
+    profit_sum=profit_sum + int(profit_total[i])
+
+print (f'Total Earnings: ${profit_sum}')
+
+
 # Average of the changes in "profit/loss" over the entire period
 # Greatest increase in profits (date and amount) over the entire period
 # greatest decrease in losses (date and amount) over the entire period
