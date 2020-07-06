@@ -44,9 +44,20 @@ for i in range(0, len(profit_total)-1):
     profit_change[i] = float(profit_total[i]) - float(profit_total[i+1])
     
 average_changes = [float(profit_total[i+1]) - float(profit_total[i]) for i in range (len(profit_total)-1)]
-average_sum = sum(average_changes) / totalmonth
+average_sum = sum(average_changes) / (totalmonth -1)
 print(f'Average Change: ${average_sum}')
 
 # Greatest increase/decrease in profits (date and amount) over the entire period
+index=0
+max_value = max(average_changes)
+min_value = min(average_changes)
+# date = index(max_value)
+# for index in max_value:
+#     print(index,max)
 
+# if profit_change[i] == max_value:
+print(f'Greatest Increase in Profits: {date} ${max_value}')
+print(f'Greatest Decrease in Profits: {date} ${min_value}')
 
+# for max in average_changes:
+#     print(index,max)
