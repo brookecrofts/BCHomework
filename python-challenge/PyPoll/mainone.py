@@ -6,12 +6,10 @@ csvpath=os.path.join("C:\\Users\\brook\\OneDrive\\Documents\\BootCamp\\Python\\B
 
 #containers needed
 candidate_list = ["Khan", "Correy", "Li", "O'Tooley"]
-# print(candidate_list)
 total_votes = 0
 candidate_votes = {}
 percent_of_votes = 0
 total_votes = []
-# i=0
 
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
@@ -22,10 +20,21 @@ with open(csvpath) as csvfile:
         candidate=row[2]
         total_votes.append(candidate)
         candidate_list.append(candidate)
-        # candidate_list.count("Khan")
+
+        if (candidate in candidate_votes):
+            candidate_votes[candidate] +=1
+        else:
+            candidate_votes[candidate] = 1
+       
+
+    list(candidate_votes.keys())
+    candidate_list = list(candidate_votes.keys())
+    Kahnvotes = candidate_votes['Khan']
+    Correyvotes = candidate_votes['Correy']
+    Livotes = candidate_votes['Li']
+    Otooleyvotes = candidate_votes["O'Tooley"]
 
 allvotes = len(total_votes)
-# Khanvotes = candidate_list.count("Khan")
 
 print("Election Results")
 print("-------------------------")
@@ -34,13 +43,12 @@ print("-------------------------")
 
 #List of candidates that received votes with percentage and number of votes
 
-
-# print(f'Khan: {Kahnovotes}')
-print(f'Correy: [candidate_list]')
-print(f'Li: [candidate_list]')
-print(f'OTooley: [candidate]')
+print(f'Khan: {Kahnvotes}')
+print(f'Correy: {Correyvotes}')
+print(f'Li: {Livotes}')
+print(f'OTooley: {Otooleyvotes}')
 print("--------------------------")
-print(f'Winner: {candidate}')
+# print(f'Winner: {candidate}')
 
 
 # output_path = os.path.join("C:\\Users\\brook\\OneDrive\\Documents\\BootCamp\\Python\\BCHomework\\python-challenge\\PyPoll\\Analysis\\outputone.txt")
