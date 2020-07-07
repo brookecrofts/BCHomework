@@ -33,8 +33,13 @@ with open(csvpath) as csvfile:
     Correyvotes = candidate_votes['Correy']
     Livotes = candidate_votes['Li']
     Otooleyvotes = candidate_votes["O'Tooley"]
+    winner = max(candidate_list)
 
 allvotes = len(total_votes)
+Kahn_percent = (candidate_votes['Khan']/allvotes)*100
+Correy_percent = (candidate_votes['Correy']/allvotes)*100
+Li_percent = (candidate_votes['Li']/allvotes)*100
+Otooley_percent = (candidate_votes["O'Tooley"]/allvotes)*100
 
 print("Election Results")
 print("-------------------------")
@@ -43,12 +48,12 @@ print("-------------------------")
 
 #List of candidates that received votes with percentage and number of votes
 
-print(f'Khan: {Kahnvotes}')
-print(f'Correy: {Correyvotes}')
-print(f'Li: {Livotes}')
-print(f'OTooley: {Otooleyvotes}')
+print(f'Khan: ({Kahn_percent}{0:.0%}),{Kahnvotes}')
+print(f'Correy: ({Correy_percent}%),{Correyvotes}')
+print(f'Li: ({Li_percent}%),{Livotes}')
+print(f'OTooley: ({Otooley_percent}%),{Otooleyvotes}')
 print("--------------------------")
-# print(f'Winner: {candidate}')
+print(f'Winner: {winner}')
 
 
 # output_path = os.path.join("C:\\Users\\brook\\OneDrive\\Documents\\BootCamp\\Python\\BCHomework\\python-challenge\\PyPoll\\Analysis\\outputone.txt")
