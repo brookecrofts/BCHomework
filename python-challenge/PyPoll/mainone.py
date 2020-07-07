@@ -56,17 +56,18 @@ print("--------------------------")
 print(f'Winner: {winner}')
 
 
-# output_path = os.path.join("C:\\Users\\brook\\OneDrive\\Documents\\BootCamp\\Python\\BCHomework\\python-challenge\\PyPoll\\Analysis\\outputone.txt")
-# with open(output_path, 'w') as csvfile:
-#     csvwriter = csv.writer(csvfile, delimiter=' ')
+output_path = os.path.join("C:\\Users\\brook\\OneDrive\\Documents\\BootCamp\\Python\\BCHomework\\python-challenge\\PyPoll\\Analysis\\outputone.txt")
+with open(output_path, 'w') as csvfile:
+    csvwriter = csv.writer(csvfile, delimiter=' ')
 
-#     csvwriter.writerow("Election Results")
-#     csvwriter.writerow("--------------------")
-
-
-
-    #     # # print(row)
-    #     i=i+1
-    #     if i>10:
-    #         break
+    csvwriter.writerow("Election Results")
+    csvwriter.writerow("--------------------")
+    csvwriter.writerow(f'Total Votes: {allvotes}')
+    csvwriter.writerow("--------------------")
+    csvwriter.writerow(f'Khan: ({Kahn_percent}{0:.0%}),{Kahnvotes}')
+    csvwriter.writerow(f'Correy: ({Correy_percent}%),{Correyvotes}')
+    csvwriter.writerow(f'Li: ({Li_percent}%),{Livotes}')
+    csvwriter.writerow(f'OTooley: ({Otooley_percent}%),{Otooleyvotes}')
+    csvwriter.writerow("--------------------------")
+    csvwriter.writerow(f'Winner: {winner}')
 
