@@ -32,7 +32,7 @@ totalmonth = len(month_count)
 print ("Company Profit Loss")
 print ("--------------------")
 
-print(f' Total Months: {totalmonth}')
+print(f'Total Months: {totalmonth}')
 
 for i in range(0, len(profit_total)):
     profit_sum=profit_sum + int(profit_total[i])
@@ -50,15 +50,14 @@ print(f'Average Change: ${average_sum}')
 # Greatest increase/decrease in profits (date and amount) over the entire period
 index=0
 max_value = max(average_changes)
+maxIndex = (average_changes.index(max_value)+1)
+maxMonth = month_count[maxIndex]
 min_value = min(average_changes)
-# max_location = average_changes.index(max_value)
-# max_date = date[max_location]
-# list.index(date)
-# date = (row[0], max_value)
-# for index in max_value:
-#     print(index,date)
-print(f'Greatest Increase in Profits: {date} ${max_value}')
-print(f'Greatest Decrease in Profits: {date} ${min_value}')
+minIndex = (average_changes.index(min_value)+1)
+minMonth = month_count[minIndex]
+
+print(f'Greatest Increase in Profits: {maxMonth} ${max_value}')
+print(f'Greatest Decrease in Profits: {minMonth} (${min_value})')
 
 # with open('csv_path', 'w') as new_csvfile:
 #     csvwriter = csv.writer(new_csvfile, delimiter ',')
