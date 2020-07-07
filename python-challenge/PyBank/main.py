@@ -59,8 +59,14 @@ minMonth = month_count[minIndex]
 print(f'Greatest Increase in Profits: {maxMonth} ${max_value}')
 print(f'Greatest Decrease in Profits: {minMonth} (${min_value})')
 
-# with open('csv_path', 'w') as new_csvfile:
-#     csvwriter = csv.writer(new_csvfile, delimiter ',')
+output_path = os.path.join("C:\\Users\\brook\\OneDrive\\Documents\\BootCamp\\Python\\BCHomework\\python-challenge\\PyBank\\Analysis\\output.txt")
+with open(output_path, 'w') as csvfile:
+    csvwriter = csv.writer(csvfile, delimiter=' ')
 
-#     csvwriter.writerow('Company Profit Loss')
-#     csvwriter.writerow(['Total months:', 'month_total'])
+    csvwriter.writerow("Company Profit Loss")
+    csvwriter.writerow("--------------------")
+    csvwriter.writerow(f'Total Months: {totalmonth}')
+    csvwriter.writerow(f'Total Earnings: ${profit_sum}')
+    csvwriter.writerow(f'Average Change: ${average_sum}')
+    csvwriter.writerow(f'Greatest Increase in Profits: {maxMonth} ${max_value}')
+    csvwriter.writerow(f'Greatest Decrease in Profits: {minMonth} (${min_value})')
