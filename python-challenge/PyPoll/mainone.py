@@ -33,13 +33,13 @@ with open(csvpath) as csvfile:
     Correyvotes = candidate_votes['Correy']
     Livotes = candidate_votes['Li']
     Otooleyvotes = candidate_votes["O'Tooley"]
-    winner = max(candidate_list)
 
 allvotes = len(total_votes)
 Kahn_percent = (candidate_votes['Khan']/allvotes)*100
 Correy_percent = (candidate_votes['Correy']/allvotes)*100
 Li_percent = (candidate_votes['Li']/allvotes)*100
 Otooley_percent = (candidate_votes["O'Tooley"]/allvotes)*100
+winner = candidate_list[0]
 
 print("Election Results")
 print("-------------------------")
