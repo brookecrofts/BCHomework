@@ -5,11 +5,12 @@ import csv
 csvpath=os.path.join("C:\\Users\\brook\\OneDrive\\Documents\\BootCamp\\Python\\BCHomework\\python-challenge\\PyPoll\\Resources\\election_data.csv")
 
 #containers needed
-candidate_list = ["Khan","Correy","Li","O'Tooley"]
+candidate_list = ["Khan", "Correy", "Li", "O'Tooley"]
+# print(candidate_list)
 total_votes = 0
-candidate_votes = []
+candidate_votes = {}
 percent_of_votes = 0
-individual_votes = 0
+total_votes = []
 # i=0
 
 with open(csvpath) as csvfile:
@@ -19,16 +20,13 @@ with open(csvpath) as csvfile:
 
     for row in csvreader:
         candidate=row[2]
-        candidate_votes.append(candidate)
+        total_votes.append(candidate)
         candidate_list.append(candidate)
-        
-        # if candidate not in candidate_list:
-        #     candidate_list.append(candidate)
-            # candidate_votes[candidate]=0
-            # candidate_votes[candidate] +=1
+        # candidate_list.count("Khan")
 
-allvotes = len(candidate_votes)
-        
+allvotes = len(total_votes)
+# Khanvotes = candidate_list.count("Khan")
+
 print("Election Results")
 print("-------------------------")
 print(f'Total Votes: {allvotes}')
@@ -36,17 +34,23 @@ print("-------------------------")
 
 #List of candidates that received votes with percentage and number of votes
 
-print(f'Khan: [candidate_list]')
+
+# print(f'Khan: {Kahnovotes}')
 print(f'Correy: [candidate_list]')
-print(f'Li: [candidate_list')
-print(f'OTooley: [candidate_list]')
+print(f'Li: [candidate_list]')
+print(f'OTooley: [candidate]')
 print("--------------------------")
 print(f'Winner: {candidate}')
 
 
-    # print(f'CSV Header; {csv_header}')
-    # for row in csvreader:
-    #     total_votes = 0
+# output_path = os.path.join("C:\\Users\\brook\\OneDrive\\Documents\\BootCamp\\Python\\BCHomework\\python-challenge\\PyPoll\\Analysis\\outputone.txt")
+# with open(output_path, 'w') as csvfile:
+#     csvwriter = csv.writer(csvfile, delimiter=' ')
+
+#     csvwriter.writerow("Election Results")
+#     csvwriter.writerow("--------------------")
+
+
 
     #     # # print(row)
     #     i=i+1
