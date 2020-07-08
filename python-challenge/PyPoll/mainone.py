@@ -26,7 +26,7 @@ with open(csvpath) as csvfile:
         else:
             candidate_votes[candidate] = 1
        
-
+#create a frequency dictionary to pull each candidates vote separately
     list(candidate_votes.keys())
     candidate_list = list(candidate_votes.keys())
     Kahnvotes = candidate_votes['Khan']
