@@ -59,6 +59,7 @@ minMonth = month_count[minIndex]
 print(f'Greatest Increase in Profits: {maxMonth} ${max_value}')
 print(f'Greatest Decrease in Profits: {minMonth} (${min_value})')
 
+# write output file
 output_path = os.path.join("C:\\Users\\brook\\OneDrive\\Documents\\BootCamp\\Python\\BCHomework\\python-challenge\\PyBank\\Analysis\\output.txt")
 with open(output_path, 'w') as csvfile:
     csvwriter = csv.writer(csvfile, delimiter=' ')
