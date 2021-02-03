@@ -8,6 +8,6 @@
 
 ![C&R](https://github.com/brookecrofts/Gamer-analysis-Python/blob/master/Pymaceuticals/Correlation_Regression_Ex.PNG)
 
-![Code]()
+![Code](https://github.com/brookecrofts/Gamer-analysis-Python/blob/master/Pymaceuticals/Summary_statistics.PNG)
 
 ![Matplotlib]()
