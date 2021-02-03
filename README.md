@@ -10,4 +10,4 @@
 
 ![Code](https://github.com/brookecrofts/Gamer-analysis-Python/blob/master/Pymaceuticals/Summary_statistics.PNG)
 
-![Matplotlib]()
+![Matplotlib](https://github.com/brookecrofts/Gamer-analysis-Python/blob/master/Pymaceuticals/Matplotlib_ex.PNG)
